@@ -52,7 +52,7 @@ class SalaryView extends StatelessWidget {
                 controller: _antiquityController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
-                  labelText: 'Antigüedad (Años)',
+                  labelText: 'Antiguedad (Años)',
                 ),
               ),
             ),

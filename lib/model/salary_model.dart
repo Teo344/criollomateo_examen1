@@ -40,7 +40,6 @@ class SalaryModel {
   }
 
   double calcularNuevoSalario(double salarioActual, double reajusteRate) {
-    // Calcula el nuevo sueldo = sueldo + (sueldo * porcentaje) [cite: 11]
     return salarioActual * (1 + reajusteRate);
   }
 }
