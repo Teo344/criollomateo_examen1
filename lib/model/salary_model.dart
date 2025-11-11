@@ -7,32 +7,31 @@ class SalaryModel {
   double calcularReajuste(int antiguedad, double salarioActual) {
     double reajusteRate = 0.0;
 
+  //mas de 20 anios
     if (antiguedad >= antiguedadVeinte) {
       reajusteRate = 0.15;
     } 
-    // Regla: Más de 10 años y hasta 20 años (11 a 20 años)
+    //entre 10 y 20
     else if (antiguedad > antiguedadDiez && antiguedad < antiguedadVeinte) {
       if (salarioActual <= sueldoDiez) {
-        // Sueldo actual hasta $300.000: 14% de reajuste [cite: 7]
         reajusteRate = 0.14; 
       } else if (salarioActual > sueldoDiez && salarioActual <= sueldoVeinte) {
-        // Sueldo actual más de $300.000 y hasta $500.000: 12% de reajuste [cite: 7]
         reajusteRate = 0.12; 
-      } else { // salarioActual > 500K
-        // Sueldo actual más de $500.000: 10% de reajuste [cite: 7]
+      } else { 
+      
         reajusteRate = 0.10; 
       }
     } 
-    // Regla: Hasta 10 años de antigüedad (0 a 10 años)
+    //menos de 10
     else if (antiguedad <= antiguedadDiez) {
       if (salarioActual <= sueldoDiez) {
-        // Sueldo actual hasta $300.000: 12% de reajuste [cite: 7]
+        
         reajusteRate = 0.12; 
       } else if (salarioActual > sueldoDiez && salarioActual <= sueldoVeinte) {
-        // Sueldo actual más de $300.000 y hasta $500.000: 10% de reajuste [cite: 7]
+        
         reajusteRate = 0.10; 
-      } else { // salarioActual > 500K
-        // Sueldo actual superior a $500.000: 8% de reajuste [cite: 7]
+      } else {
+        
         reajusteRate = 0.08; 
       }
     }
