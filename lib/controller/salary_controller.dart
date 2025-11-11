@@ -34,6 +34,6 @@ class SalaryController {
     final nuevoSalarioTotal = _nuevoSalario.toStringAsFixed(2);
 
     _mensajeResultante= "Se aplicó un ${porcentaje}% de reajuste. Su nuevo sueldo es: \$$nuevoSalarioTotal.";
-    return "Cálculo Exitoso";
+    return "Calculo Exitoso";
   }
 }

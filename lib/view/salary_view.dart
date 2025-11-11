@@ -16,7 +16,7 @@ class SalaryView extends StatelessWidget {
       _salaryController.text,
     );
 
-    if (validationResult == "Cálculo Exitoso") {
+    if (validationResult == "Calculo Exitoso") {
       Navigator.pushNamed(
         context,
         '/results',
